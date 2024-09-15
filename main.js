@@ -1,8 +1,6 @@
 let name =document.getElementById('name');
-let password = document.getElementById('password')
-let email = document.getElementById('email')
-let email1 = document.getElementById('email-login')
-let password1 = document.getElementById('password-login')
+let password = document.getElementById('password');
+let email = document.getElementById('email');
 
 
 
@@ -12,7 +10,7 @@ if (localStorage.page != null){
   datautilusateur = JSON.parse(localStorage.page)
 }else {
   datautilusateur = [];
-}
+};
 
 
 btn.onclick = function (){
@@ -26,17 +24,16 @@ btn.onclick = function (){
   console.log(datautilusateur);
   localStorage.setItem('page', JSON.stringify(datautilusateur));
   deletedata()
-}
+};
 function deletedata() {
   name.value= '',
   email.value= '',
   password.value= ''
-}
+};
 let btn_signup = document.getElementById('btn-signup');
 let btn_login = document.getElementById('btn-login');
 let container = document.getElementById('container');
 let container_end = document.getElementById('container-end');
-let btn_container = document.getElementById('btn-container');
 
 btn_signup.onclick = function (){
   container.style.marginLeft = '50%';
@@ -47,8 +44,7 @@ btn_signup.onclick = function (){
   container.style.transformStyle = 'scale3d(1.4,1.4,1.2)';
   container.style.background = 'linear-gradient(to left ,rgb(243, 36, 250),rgb(39, 137, 250) 15%,rgb(96, 231, 255) ,rgb(179, 174, 174))';
   btn_container.innerHTML = 'Login';
-  console.log('12')
-}
+};
 btn_login.onclick = function (){
   container.style.marginLeft = '0%';
   container.style.borderTopRightRadius = '50%';
@@ -57,10 +53,7 @@ btn_login.onclick = function (){
   container.style.borderBottomLeftRadius='0';
   container.style.transformStyle = 'scale3d(1.4,1.4,1.2)';
   container.style.background = 'linear-gradient(to right ,rgb(243, 36, 250),rgb(39, 137, 250) 15%,rgb(96, 231, 255) ,rgb(179, 174, 174))';
-  btn_container.innerHTML = 'SignUp';
-  console.log('12')
-  console.log('30')
-}
+};
 
 
 
